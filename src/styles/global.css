@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+
+
+@theme {
+  --font-skranji: 'Skranji', 'sans-serif';
+}
+
+.font-skranji {
+  font-family: var(--font-skranji);
+}

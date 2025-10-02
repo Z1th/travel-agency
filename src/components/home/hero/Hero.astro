@@ -1,0 +1,40 @@
+---
+import Background from "./Background.astro";
+import HeroText from "./HeroText.astro";
+import SearchButton from "./SearchButton.astro";
+import ButtomCard from "./BottomCard.astro";
+import Navbar from "../../layout/Navbar.astro";
+export interface Props {
+  title: string;
+  subtitle?: string;
+  backgroundImage: string;
+}
+
+const { title, subtitle = "", backgroundImage } = Astro.props;
+---
+
+<Navbar />
+
+<section
+  class={`relative w-full bg-black overflow-hidden h-screen min-h-[600px]`}
+>
+  <Background title={title} backgroundImage={backgroundImage} />
+
+  <div
+    class="relative z-10 flex flex-col gap-y-5 items-center justify-center w-full h-full text-center text-white"
+  >
+    <HeroText title={title} subtitle={subtitle} />
+    <SearchButton />
+  </div>
+
+  <div
+    class="absolute bottom-5 left-0 right-0 flex items-center justify-center"
+  >
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-4xl px-4 place-items-center">
+    <ButtomCard number="12" text="Years of Experience" />
+    <ButtomCard number="2K" text="Camping Destination" />
+    <ButtomCard number="3K" text="Happy Customers" />
+    <ButtomCard number="4,8" text="Overal Rating" />
+    </div>
+  </div>
+</section>

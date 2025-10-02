@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+import DestinationSwiper from "./DestinationSwiper.astro";
+---
+
+<div class="p-10">
+  <section class="flex flex-col gap-y-7 relative w-full bg-[#fdfdfd]">
+    <!-- Title and Subtitle Container -->
+    <div class="flex flex-col md:flex-row">
+      <!-- Title and button section -->
+      <div class="flex flex-col gap-y-4 w-full md:w-1/2">
+        <div
+          class="px-3 py-1 border border-gray-300 shadow rounded-full bg-white w-max"
+        >
+          <p class="text-sm text-gray-400">/Our Destination</p>
+        </div>
+        <span class="text-5xl font-semibold"
+          >Your next favorite <br /> place awaits</span
+        >
+      </div>
+      <!-- Information section -->
+      <div class="flex flex-col w-full md:w-1/2 justify-center gap-y-5 md:px-13 py-6">
+        <p class="text-md text-gray-700">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          impedit provident expedita quam eos assumenda vitae, placeat
+          cupiditate alias doloribus voluptatum repellat.
+        </p>
+        <a
+          href="#"
+          class="flex flex-row items-center justify-between px-5 py-3 bg-black shadow rounded-full w-46 hover:opacity-90"
+        >
+          <p class="text-md text-white">See all</p>
+          <div class="flex flex-row">
+            <Icon
+              name="material-symbols:arrow-forward-ios-rounded"
+              class="w-4 h-4 text-white"
+            />
+            <Icon
+              name="material-symbols:arrow-forward-ios-rounded"
+              class="w-4 h-4 text-white"
+            />
+            <Icon
+              name="material-symbols:arrow-forward-ios-rounded"
+              class="w-4 h-4 text-white"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="overflow-hidden">
+      <DestinationSwiper />
+    </div>
+  </section>
+</div>

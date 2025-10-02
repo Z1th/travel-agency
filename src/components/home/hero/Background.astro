@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  backgroundImage: string;
+}
+
+const { title, backgroundImage } = Astro.props;
+---
+
+  <div class="absolute inset-0 w-full h-full">
+    <img
+      src={backgroundImage}
+      alt={`Background for ${title}`}
+      class="w-full h-full object-cover object-center"
+      loading="eager"
+    />
+  </div>
+
+  <div class="absolute inset-0 w-full h-full bg-[#000000] opacity-60"></div>
