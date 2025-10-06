@@ -1,0 +1,98 @@
+---
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import OurActivityCard from "./OurActivityCard.astro";
+
+const activities = [
+  {
+    image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
+    title: "Cancún",
+    countActivities: "245",
+  },
+  {
+    image: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg",
+    title: "Ciudad de México",
+    countActivities: "189",
+  },
+  {
+    image: "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg",
+    title: "Oaxaca",
+    countActivities: "87",
+  },
+  {
+    image: "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg",
+    title: "Riviera Maya",
+    countActivities: "156",
+  },
+  {
+    image: "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg",
+    title: "Puerto Vallarta",
+    countActivities: "134",
+  },
+  {
+    image: "https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg",
+    title: "Guadalajara",
+    countActivities: "98",
+  },
+  {
+    image: "https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg",
+    title: "Playa del Carmen",
+    countActivities: "112",
+  },
+];
+---
+
+<div class="w-full lg:w-3/4">
+  <div class="swiper activities-swiper">
+    <div class="swiper-wrapper">
+      {
+        activities.map((activity) => (
+          <div class="swiper-slide">
+            <OurActivityCard
+              image={activity.image}
+              title={activity.title}
+              countActivities={activity.countActivities}
+            />
+          </div>
+        ))
+      }
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import {Navigation, Autoplay } from "swiper/modules";
+
+  new Swiper(".activities-swiper", {
+    modules: [Navigation, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    allowTouchMove: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>

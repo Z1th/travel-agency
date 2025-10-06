@@ -13,7 +13,9 @@
 }
 
 .destination-swiper .swiper-button-next,
-.destination-swiper .swiper-button-prev {
+.destination-swiper .swiper-button-prev,
+.activities-swiper .swiper-button-next,
+.activities-swiper .swiper-button-prev {
   color: #fff;
   background: rgba(0, 0, 0, 0.874);
   border-radius: 50%;
@@ -21,33 +23,33 @@
   height: 40px;
 }
 
-.destination-swiper .swiper-navigation-icon {
+.destination-swiper .swiper-navigation-icon,
+.activities-swiper .swiper-navigation-icon {
   width: 10px;
 }
 
 .services-swiper .swiper-button-prev,
-.services-swiper .swiper-button-next
-{
-position: absolute !important;
-bottom: 3rem !important;
-top: auto !important;
-left: auto !important;
-width: 2rem !important;
-height: 2rem !important;
-background: rgba(0, 0, 0, 0.7) !important;
-border-radius: 50% !important;
-color: white !important;
+.services-swiper .swiper-button-next {
+  position: absolute !important;
+  bottom: 3rem !important;
+  top: auto !important;
+  left: auto !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 50% !important;
+  color: white !important;
 }
 
-.services-swiper .swiper-button-prev{
+.services-swiper .swiper-button-prev {
   right: 4rem !important;
 }
 
-.services-swiper .swiper-button-next{
+.services-swiper .swiper-button-next {
   right: 1rem !important;
 }
 
-.services-swiper .swiper-navigation-icon{
+.services-swiper .swiper-navigation-icon {
   width: 10px;
 }
 
