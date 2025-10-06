@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import AboutHeader from "./AboutHeader.astro";
 import CustomerReview from "./CustomerReview.astro";
 import ServicesSwiper from "./ServicesSwiper.astro";
+import VideoHighlight from "./VideoHighlight.astro";
 ---
 
 <div class="p-6 md:p-10">
@@ -12,55 +13,7 @@ import ServicesSwiper from "./ServicesSwiper.astro";
     <div class="flex flex-wrap md:flex-row gap-y-7">
       <CustomerReview />
       <ServicesSwiper />
-
-      <div class="flex-col w-full lg:w-1/3 p-3 gap-y-5 hidden lg:flex">
-        <!-- MEDIA CONTAINER -->
-        <div class="flex relative w-full h-65">
-          <img
-            src="https://images.pexels.com/photos/34137557/pexels-photo-34137557.jpeg"
-            alt="Destination"
-            class="w-full h-full object-cover rounded-xl"
-          />
-          <div
-            class="absolute w-16 h-16 flex items-center justify-center
-         top-1/2 left-1/2 cursor-pointer -translate-x-1/2 -translate-y-1/2
-         bg-gray-600 opacity-100 rounded-full transition-opacity hover:opacity-60"
-          >
-            <Icon
-              name="material-symbols:play-circle"
-              class="text-gray-200 w-8 h-8"
-            />
-          </div>
-        </div>
-
-        <div class="flex flex-col p-3 gap-y-4">
-          <p class="text-xl font-bold">Video Highlights</p>
-          <p class="text-md text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-            nesciunt quisquam laborum error sint voluptatibus.
-          </p>
-
-          <div class="flex items-center justify-center border-2 border-black rounded-full shadow cursor-pointer opacity-100 transition-opacity hover:opacity-40">
-            <p class="text-lg px-4 py-2">View All Services</p>
-          </div>
-        </div>
-      </div>
+      <VideoHighlight />
     </div>
   </section>
 </div>
-
-<script>
-  import Swiper from "swiper";
-  import { Navigation, Autoplay } from "swiper/modules";
-
-  new Swiper(".services-swiper", {
-    modules: [Navigation, Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 24,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>

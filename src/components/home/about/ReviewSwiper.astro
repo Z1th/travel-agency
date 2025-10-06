@@ -1,0 +1,66 @@
+---
+import CardReview from "./CardReview.astro";
+import "swiper/css";
+import "swiper/css/pagination";
+
+function truncateText(text: string, maxLength: number = 120): string {
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength).trim() + "...";
+}
+
+const reviews = [
+  {
+    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, placeat debitis? Unde temporibus cum reiciendis. Quisquam incidunt saepe inventore ex.",
+    name: "Jhon Wick Doe",
+    location: "Oaxaca, México",
+    rating: "4,5",
+    image:
+      "https://images.pexels.com/photos/34132715/pexels-photo-34132715.jpeg",
+  },
+  {
+    text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
+    name: "Maria González",
+    location: "CDMX, México",
+    rating: "4,8",
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+  },
+  {
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.",
+    name: "Carlos Ruiz",
+    location: "Cancún, México",
+    rating: "4,7",
+    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+  },
+];
+---
+
+<div class="swiper review-swiper w-full h-auto pb-8">
+  <div class="swiper-wrapper">
+    {
+      reviews.map((review) => (
+        <div class="swiper-slide px-2">
+          <CardReview
+            text={truncateText(review.text)}
+            name={review.name}
+            location={review.location}
+            rating={review.rating}
+            image={review.image}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import { Pagination, Autoplay } from "swiper/modules";
+
+  new Swiper(".review-swiper", {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 16,
+    autoplay: { delay: 4000 },
+    pagination: { el: ".swiper-pagination", clickable: true },
+  });
+</script>

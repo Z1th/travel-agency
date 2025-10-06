@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  text: string;
+  name: string;
+  location: string;
+  rating: string;
+  image: string;
+}
+
+const { text, name, location, rating, image } = Astro.props;
+---
+
+<div
+  class="flex flex-col gap-y-3 p-4 rounded-xl shadow min-h-[14rem] justify-evenly bg-white"
+>
+  <p class="text-base md:text-lg text-gray-700 leading-relaxed">{text}</p>
+
+  <div
+    class="flex flex-col flex-wrap sm:flex-row sm:items-center sm:justify-between gap-y-4"
+  >
+    <div class="flex flex-row items-center gap-x-3">
+      <div
+        class="w-12 h-12 sm:w-16 sm:h-16 rounded-full border border-gray-400 overflow-hidden"
+      >
+        <img src={image} alt="" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <p class="font-semibold text-sm sm:text-base">{name}</p>
+        <p class="text-gray-500 text-xs sm:text-sm">{location}</p>
+      </div>
+    </div>
+
+    <div
+      class="flex items-center max-w-max border-2 border-gray-200 px-3 py-1 rounded-full text-sm sm:text-base"
+    >
+      <p class="font-medium">Rating {rating}</p>
+      <Icon
+        name="material-symbols:kid-star"
+        class="w-5 h-5 text-yellow-500 ml-2"
+      />
+    </div>
+  </div>
+</div>
