@@ -2,7 +2,7 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import OurActivityCard from "./OurActivityCard.astro";
+import OurAccomodationCard from "./OurAccomodationCard.astro";
 
 const activities = [
   {
@@ -49,7 +49,7 @@ const activities = [
       {
         activities.map((activity) => (
           <div class="swiper-slide">
-            <OurActivityCard
+            <OurAccomodationCard
               image={activity.image}
               title={activity.title}
               countActivities={activity.countActivities}
@@ -69,7 +69,7 @@ const activities = [
 
   new Swiper(".activities-swiper", {
     modules: [Navigation, Autoplay],
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 24,
     allowTouchMove: true,
     grabCursor: true,
@@ -82,10 +82,10 @@ const activities = [
     },
     breakpoints: {
       640: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
       1024: {
         slidesPerView: 3,
