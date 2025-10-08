@@ -1,0 +1,42 @@
+---
+export interface Props {
+  image: string;
+  title: string;
+  description: string;
+  authorImage: string;
+  authorName: string;
+  date: string;
+  readTime: string;
+}
+
+const { image, title, description, authorImage, authorName, date, readTime } =
+  Astro.props;
+---
+
+<div class="w-full flex flex-col gap-y-4">
+  <a href="#">
+    <img
+      src={image}
+      alt="Photo Blog"
+      class="w-full h-48 sm:h-52 lg:h-60 object-cover rounded-t-lg opacity-100 transition-opacity hover:opacity-80"
+    />
+  </a>
+  <a href="#">
+    <p class="text-lg sm:text-xl lg:text-2xl font-semibold">{title}</p>
+  </a>
+  <p class="text-sm sm:text-base lg:text-lg text-gray-900 leading-6">
+    {description}
+  </p>
+  <div class="flex flex-row gap-x-2 items-center">
+    <img
+      src={authorImage}
+      alt="Profile Photo"
+      class="w-5 h-5 sm:w-6 sm:h-6 rounded-full"
+    />
+    <p class="text-xs sm:text-sm text-gray-800">{authorName}</p>
+    <span class="text-gray-400">•</span>
+    <p class="text-xs sm:text-sm text-gray-800">{date}</p>
+    <span class="text-gray-400">•</span>
+    <p class="text-xs sm:text-sm text-gray-800">{readTime}</p>
+  </div>
+</div>

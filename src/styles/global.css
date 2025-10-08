@@ -17,7 +17,9 @@
 .activities-swiper .swiper-button-next,
 .activities-swiper .swiper-button-prev,
 .offers-swiper .swiper-button-next,
-.offers-swiper .swiper-button-prev {
+.offers-swiper .swiper-button-prev,
+.blog-swiper .swiper-button-next,
+.blog-swiper .swiper-button-prev {
   color: #fff;
   background: rgba(0, 0, 0, 0.874);
   border-radius: 50%;
@@ -27,7 +29,8 @@
 
 .destination-swiper .swiper-navigation-icon,
 .activities-swiper .swiper-navigation-icon,
-.offers-swiper .swiper-navigation-icon {
+.offers-swiper .swiper-navigation-icon,
+.blog-swiper .swiper-navigation-icon {
   width: 10px;
 }
 

@@ -1,11 +1,13 @@
 ---
 import BlogHeader from "./BlogHeader.astro";
+import BlogSwiper from "./BlogSwiper.astro";
 ---
 
 <div class="p-6 md:p-10">
   <section class="flex flex-col gap-y-7 relative w-full bg-[#fdfdfd]">
     <BlogHeader />
-
-    <div class="flex flex-row"></div>
+    <div class="overflow-hidden">
+      <BlogSwiper />
+    </div>
   </section>
 </div>
