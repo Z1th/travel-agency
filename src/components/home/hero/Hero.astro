@@ -3,7 +3,6 @@ import Background from "./Background.astro";
 import HeroText from "./HeroText.astro";
 import SearchButton from "./SearchButton.astro";
 import ButtomCard from "./BottomCard.astro";
-import Navbar from "../../layout/Navbar.astro";
 export interface Props {
   title: string;
   subtitle?: string;
@@ -12,8 +11,6 @@ export interface Props {
 
 const { title, subtitle = "", backgroundImage } = Astro.props;
 ---
-
-<Navbar />
 
 <section
   class={`relative w-full bg-black overflow-hidden h-screen min-h-[600px]`}

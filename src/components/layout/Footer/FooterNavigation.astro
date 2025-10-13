@@ -1,0 +1,38 @@
+---
+import NavFooter from "./NavFooter.astro";
+
+const explore = {
+  title: "Explore",
+  links: [
+    { name: "Destinations", href: "#" },
+    { name: "Top Tours", href: "#" },
+    { name: "Travel Guides", href: "#" },
+    { name: "Adventure Ideas", href: "#" },
+  ]
+};
+
+const aboutUs = {
+  title: "About Us", 
+  links: [
+    { name: "Our Story", href: "#" },
+    { name: "Testimonials", href: "#" },
+    { name: "Sustainability", href: "#" }
+  ]
+};
+
+const support = {
+  title: "Support",
+  links: [
+    { name: "FAQs", href: "#" },
+    { name: "Contact Us", href: "#" },
+    { name: "Booking Policies", href: "#" },
+    { name: "Travel Insurance", href: "#" }
+  ]
+};
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-32 border-b pb-7 border-gray-500">
+  <NavFooter section={explore} />
+  <NavFooter section={aboutUs} />
+  <NavFooter section={support} />
+</div>

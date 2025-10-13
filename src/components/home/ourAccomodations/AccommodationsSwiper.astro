@@ -2,7 +2,7 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import OurAccomodationCard from "./OurAccomodationCard.astro";
+import AccommodationCard from "./AccommodationCard.astro";
 
 const activities = [
   {
@@ -49,7 +49,7 @@ const activities = [
       {
         activities.map((activity) => (
           <div class="swiper-slide">
-            <OurAccomodationCard
+            <AccommodationCard
               image={activity.image}
               title={activity.title}
               countActivities={activity.countActivities}

@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+import RSSButton from "./RSSButton.astro";
+---
+
+<div class="flex flex-col lg:flex-row w-full justify-between items-start gap-y-6 border-b pb-7 border-gray-500">
+  <div class="flex flex-col gap-y-6 lg:gap-y-8">
+    <div class="text-3xl md:text-4xl lg:text-5xl text-white font-semibold">
+      <p>Pack your bags, your</p>
+      <p class="text-[#818181]">adventure awaits!</p>
+    </div>
+
+    <div class="flex flex-row flex-wrap gap-x-4 gap-y-4">
+      <RSSButton
+        name="Youtube"
+        src="#"
+        icon="streamline-logos:youtube-clip-logo-solid"
+      />
+      <RSSButton
+        name="Instagram"
+        src="#"
+        icon="streamline-logos:instagram-logo-2-solid"
+      />
+      <RSSButton
+        name="Facebook"
+        src="#"
+        icon="streamline-logos:facebook-logo-2-solid"
+      />
+    </div>
+  </div>
+
+  <a
+    href="#"
+    class="flex flex-row gap-x-2 items-center justify-between px-4 md:px-5 py-2 md:py-3 bg-white shadow rounded-full hover:opacity-90 w-full lg:w-auto justify-center lg:justify-between"
+  >
+    <p class="text-sm md:text-md text-black font-semibold">Book a Vacation</p>
+    <Icon
+      name="material-symbols:arrow-forward-ios-rounded"
+      class="w-4 h-4 text-black"
+    />
+  </a>
+</div>

@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="flex flex-col lg:flex-row justify-between items-center gap-y-6">
+  <!-- LOGO -->
+  <Icon 
+    id="navbar-icon" 
+    name="material-symbols:travel" 
+    class="text-4xl lg:text-5xl text-white order-2 lg:order-1" 
+  />
+  
+  <!-- Navigation Links -->
+  <div class="flex flex-wrap justify-center gap-2 md:gap-3 order-1 lg:order-2">
+    <a href="" class="text-white px-3 md:px-4 py-2 md:py-3 rounded-full text-sm md:text-lg opacity-60 transition hover:opacity-100 hover:bg-white hover:text-black">Home</a>
+    <a href="" class="text-white px-3 md:px-4 py-2 md:py-3 rounded-full text-sm md:text-lg opacity-60 transition hover:opacity-100 hover:bg-white hover:text-black">Tours</a>
+    <a href="" class="text-white px-3 md:px-4 py-2 md:py-3 rounded-full text-sm md:text-lg opacity-60 transition hover:opacity-100 hover:bg-white hover:text-black">Promotions</a>
+    <a href="" class="text-white px-3 md:px-4 py-2 md:py-3 rounded-full text-sm md:text-lg opacity-60 transition hover:opacity-100 hover:bg-white hover:text-black">About</a>
+    <a href="" class="text-white px-3 md:px-4 py-2 md:py-3 rounded-full text-sm md:text-lg opacity-60 transition hover:opacity-100 hover:bg-white hover:text-black">Blog</a>
+  </div>
+  
+  <!-- Contact Button -->
+  <a href="#" class="flex flex-row gap-x-2 text-white text-sm md:text-lg border border-white rounded-full items-center justify-center px-4 md:px-6 py-2 hover:bg-white hover:text-black transition order-3">
+    <Icon name="material-symbols:phone-in-talk-rounded" class="w-5 h-5 md:w-6 md:h-6" />
+    <p class="font-semibold">Call Us</p>
+  </a>
+</div>
