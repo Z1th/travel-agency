@@ -6,10 +6,20 @@
 
 @theme {
   --font-skranji: 'Skranji', 'sans-serif';
+  --font-outfit: 'Outfit Variable', 'sans-serif';
+  --font-nunito: 'Nunito Variable', 'sans-serif';
 }
 
 .font-skranji {
   font-family: var(--font-skranji);
+}
+
+.font-outift{
+  font-family: var(--font-outfit);
+}
+
+.font-nunito{
+  font-family: var(--font-nunito);
 }
 
 .destination-swiper .swiper-button-next,

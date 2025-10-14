@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import Swiper from 'swiper';
-import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
+import CardReview from './CardReview.jsx';
 
 const reviews = [
   {
@@ -28,19 +27,11 @@ const reviews = [
   },
 ];
 
-function truncateText(text, maxLength = 120) {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength).trim() + "...";
-}
-
 export default function ReviewSwiperIsland() {
   useEffect(() => {
     new Swiper(".review-swiper", {
-      modules: [Pagination, Autoplay],
       slidesPerView: 1,
       spaceBetween: 16,
-      autoplay: { delay: 4000 },
-      pagination: { el: ".swiper-pagination", clickable: true },
     });
   }, []);
 
@@ -49,30 +40,7 @@ export default function ReviewSwiperIsland() {
       <div className="swiper-wrapper">
         {reviews.map((review, index) => (
           <div key={index} className="swiper-slide px-2">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <div className="flex items-start gap-4">
-                <img
-                  src={review.image}
-                  alt={review.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div className="flex-1">
-                  <p className="text-gray-600 text-sm mb-3">
-                    {truncateText(review.text)}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-semibold text-gray-900">{review.name}</h4>
-                      <p className="text-sm text-gray-500">{review.location}</p>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span className="text-yellow-400">⭐</span>
-                      <span className="font-semibold">{review.rating}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <CardReview image={review.image} name={review.name} text={review.text} location={review.location} rating={review.rating} />
           </div>
         ))}
       </div>

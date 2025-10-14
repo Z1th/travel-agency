@@ -1,0 +1,17 @@
+---
+export interface Props{
+  sectionName: string;
+  title: string;
+}
+
+const {sectionName, title} = Astro.props;
+---
+
+<div
+  class="px-3 py-1 border border-gray-300 shadow rounded-full bg-white w-max"
+>
+  <p class="text-sm text-gray-400">/{sectionName}</p>
+</div>
+<span class="text-5xl font-semibold"
+  >{title}</span
+>

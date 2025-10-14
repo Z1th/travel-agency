@@ -82,10 +82,10 @@ export default function BlogSwiperIsland() {
   }, []);
 
   return (
-    <div class="swiper blog-swiper overflow-hidden">
-      <div class="swiper-wrapper">
+    <div className="swiper blog-swiper overflow-hidden">
+      <div className="swiper-wrapper">
         {blogs.map((blog, index) => (
-          <div key={index} class="swiper-slide">
+          <div key={index} className="swiper-slide">
             <BlogCard
               image={blog.image}
               title={blog.title}
@@ -98,8 +98,8 @@ export default function BlogSwiperIsland() {
           </div>
         ))}
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
     </div>
   );
 }

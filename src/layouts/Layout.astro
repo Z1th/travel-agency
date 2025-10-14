@@ -1,16 +1,56 @@
 ---
 import Navbar from "../components/layout/Navbar.astro"
 import Footer from "../components/layout/Footer/Footer.astro"
+import '@fontsource-variable/outfit';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Astro Travel - Your Adventure Awaits", 
+  description = "Discover amazing destinations and create unforgettable memories with Astro Travel. Book your next adventure today with our expert travel guides and exclusive offers."
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Basic Meta Tags -->
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Travel</title>
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="travel, adventure, destinations, tours, vacation, booking, travel agency" />
+		<meta name="author" content="ZithCode (Hermar López)" />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:site_name" content="Astro Travel" />
+		
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="/og-image.jpg" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#1e40af" />
+		
+		<!-- Scripts -->
 		<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 	</head>
 	<body>

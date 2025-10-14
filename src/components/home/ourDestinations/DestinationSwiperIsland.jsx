@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Swiper from "swiper";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -38,7 +38,7 @@ export default function DestinationSwiperIsland() {
 
   useEffect(() => {
     new Swiper(".destination-swiper", {
-      modules: [Navigation, Autoplay],
+      modules: [Navigation],
       slidesPerView: "auto",
       spaceBetween: 24,
       centeredSlides: false,

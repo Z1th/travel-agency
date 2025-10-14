@@ -1,23 +1,17 @@
 ---
+import TitleWithCrumb from "../../layout/TitleWithCrumb.astro";
+import DescriptionSection from "../../layout/DescriptionSection.astro";
 ---
 
 <div class="flex flex-col md:flex-row">
   <div class="flex flex-col gap-y-4 w-full md:w-1/2">
-    <div
-      class="px-3 py-1 border border-gray-300 shadow rounded-full bg-white w-max"
-    >
-      <p class="text-sm text-gray-400">/About us</p>
+    <div class="w-3/5 flex flex-col gap-y-4">
+       <TitleWithCrumb sectionName="About Us" title="Capture Your Unforgettable Moments" />
     </div>
-    <span class="text-5xl font-semibold"
-      >Capture Your <b class="font-semibold text-gray-600"><br />Unforgettable Moments</b></span
-    >
   </div>
   <div
     class="flex flex-col w-full md:w-1/2 justify-center gap-y-5 md:px-13 py-6"
   >
-    <p class="text-md text-gray-700">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore impedit
-      provident expedita quam eos assumenda vitae, placeat cupiditate alias.
-    </p>
+  <DescriptionSection text={`Turn every second into a timeless memory. From breathtaking landscapes to intimate celebrations, this is where your stories become legends. Let the perfect backdrop elevate your experience—your next chapter deserves to be unforgettable.`} />
   </div>
 </div>

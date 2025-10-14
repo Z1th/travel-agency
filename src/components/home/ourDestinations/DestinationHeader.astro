@@ -1,28 +1,24 @@
 ---
 import { Icon } from "astro-icon/components";
+import TitleWithCrumb from "../../layout/TitleWithCrumb.astro";
+import DescriptionSection from "../../layout/DescriptionSection.astro";
 ---
 
 <div class="flex flex-col md:flex-row">
-  <!-- Title and button section -->
   <div class="flex flex-col gap-y-4 w-full md:w-1/2">
-    <div
-      class="px-3 py-1 border border-gray-300 shadow rounded-full bg-white w-max"
-    >
-      <p class="text-sm text-gray-400">/Our Destination</p>
-    </div>
-    <span class="text-5xl font-semibold"
-      >Your next favorite <br /> place awaits</span
-    >
+    <TitleWithCrumb
+      sectionName="Our Destination"
+      title="Your next favorite\nplace awaits"
+    />
   </div>
-  <!-- Information section -->
   <div
     class="flex flex-col w-full md:w-1/2 justify-center gap-y-5 md:px-13 py-6"
   >
-    <p class="text-md text-gray-700">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore impedit
-      provident expedita quam eos assumenda vitae, placeat cupiditate alias
-      doloribus voluptatum repellat.
-    </p>
+
+    <DescriptionSection
+      text={`Your next favorite place awaits. Discover a spot that feels made just for you—where comfort meets charm and every moment feels like a retreat. Your perfect escape is here.`}
+    />
+
     <a
       href="#"
       class="flex flex-row items-center justify-between px-5 py-3 bg-black shadow rounded-full w-46 hover:opacity-90"

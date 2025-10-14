@@ -1,15 +1,11 @@
 ---
+import TitleWithCrumb from "../../layout/TitleWithCrumb.astro";
+import DescriptionSection from "../../layout/DescriptionSection.astro";
 ---
 
-<div class="flex flex-col md:flex-row w-full lg:w-1/4">
+<div class="flex flex-col md:flex-row w-full lg:w-2/6">
   <div class="flex flex-col gap-y-4 w-full">
-    <div
-      class="px-3 py-1 border border-gray-300 shadow rounded-full bg-white w-max"
-    >
-      <p class="text-sm text-gray-400">/Our Activities</p>
-    </div>
-    <span class="text-5xl font-semibold"
-      >Discover Unique <br> Accomodations</span
-    >
+    <TitleWithCrumb sectionName="Our Activities" title="Discover Unique Accomodations" />
+    <DescriptionSection text="Go beyond a simple stay. Discover one-of-a-kind homes and unique spaces that transform your trip into an unforgettable story." />
   </div>
 </div>
