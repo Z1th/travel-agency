@@ -1,5 +1,8 @@
 ---
 import OffersSwiperIsland from "./OffersSwiperIsland.jsx";
+import OffersSkeleton from "./OffersSkeleton.astro";
 ---
 
-<OffersSwiperIsland client:visible />
+<OffersSwiperIsland client:idle>
+  <OffersSkeleton slot="fallback" />
+</OffersSwiperIsland>

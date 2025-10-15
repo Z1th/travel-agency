@@ -1,4 +1,8 @@
 ---
 import ReviewSwiperIsland from "./ReviewSwiperIsland.jsx";
+import ReviewSkeleton from "./ReviewSkeleton.astro";
 ---
-<ReviewSwiperIsland client:visible />
+
+<ReviewSwiperIsland client:idle>
+  <ReviewSkeleton slot="fallback" />
+</ReviewSwiperIsland>

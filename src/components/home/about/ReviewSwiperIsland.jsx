@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
 import CardReview from './CardReview.jsx';
 
 const reviews = [
@@ -30,16 +32,17 @@ const reviews = [
 export default function ReviewSwiperIsland() {
   useEffect(() => {
     new Swiper(".review-swiper", {
+      modules: [Pagination],
       slidesPerView: 1,
       spaceBetween: 16,
     });
   }, []);
 
   return (
-    <div className="swiper review-swiper w-full h-auto pb-8">
+    <div className="swiper review-swiper w-full h-auto pb-8 p-3">
       <div className="swiper-wrapper">
         {reviews.map((review, index) => (
-          <div key={index} className="swiper-slide px-2">
+          <div key={index} className="swiper-slide p-3">
             <CardReview image={review.image} name={review.name} text={review.text} location={review.location} rating={review.rating} />
           </div>
         ))}

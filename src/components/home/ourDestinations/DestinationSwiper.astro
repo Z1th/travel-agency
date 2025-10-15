@@ -1,5 +1,8 @@
 ---
-import DestinationSwiperIsland from "./DestinationSwiperIsland"
+import DestinationSwiperIsland from "./DestinationSwiperIsland.jsx";
+import DestinationSkeleton from "./DestinationSkeleton.astro";
 ---
 
-<DestinationSwiperIsland client:visible />
+<DestinationSwiperIsland client:idle>
+  <DestinationSkeleton />
+</DestinationSwiperIsland>

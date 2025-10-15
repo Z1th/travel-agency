@@ -1,5 +1,8 @@
 ---
 import BlogSwiperIsland from "./BlogSwiperIsland.jsx";
+import BlogSkeleton from "./BlogSkeleton.astro";
 ---
 
-<BlogSwiperIsland client:visible />
+<BlogSwiperIsland client:idle>
+  <BlogSkeleton slot="fallback" />
+</BlogSwiperIsland>
